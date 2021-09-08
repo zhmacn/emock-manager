@@ -274,6 +274,7 @@ public class EMManagerService {
 
     private List<String> toStringChain(List<EMFieldInfo> fieldInfos){
         List<String> ls=new ArrayList<>();
+        if(fieldInfos==null){return ls;}
         for(EMFieldInfo fi:fieldInfos){
             StringBuilder sb=new StringBuilder(256);
             fi.getFieldTrace().forEach(s->sb.append(" -> ").append(s));
